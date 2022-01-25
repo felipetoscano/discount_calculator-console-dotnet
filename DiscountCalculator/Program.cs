@@ -4,17 +4,18 @@
     {
         public static void Main(string[] args)
         {
-            var calculator = new DiscountProcessor();
+            var b1 = new Budget(500);
 
-            var budget = new Budget(100);
-            budget.AddItem(new Item("PEN", 1000));
-            budget.AddItem(new Item("PENCIL", 1000));
-            budget.AddItem(new Item("i3", 1000));
-            budget.AddItem(new Item("i4", 1000));
-            //budget.AddItem(new Item("i5", 1000));
-            //budget.AddItem(new Item("i6", 1000));
+            Console.WriteLine($"Orçamento Inicial: {b1.Value}");
 
-            calculator.Calculate(budget);
+            b1.ApplyDiscount();
+
+            Console.WriteLine($"Orçamento em aprovação: {b1.Value}");
+
+            b1.Approve();
+            b1.ApplyDiscount();
+
+            Console.WriteLine($"Orçamento depois de aprovado: {b1.Value}");
         }
     }
 }
