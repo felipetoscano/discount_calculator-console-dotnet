@@ -16,6 +16,13 @@
             b1.ApplyDiscount();
 
             Console.WriteLine($"Orçamento depois de aprovado: {b1.Value}");
+
+            /* Tentando aplicar desconto novamente no mesmo estado
+            b1.End();
+            b1.ApplyDiscount();
+            b1.ApplyDiscount();
+            */
+
         }
     }
 }
